@@ -88,16 +88,16 @@ Once we have measured the strength of the field effect from the $^{83m}$Kr S2$_E
 To measure the size and location of the S1a and S1b decays, we select $^{83m}$Kr events with an S2 pulse area pulse area between 2000 to 60000 phe as measured by the bottom PMT array.  We identify S1 candidates that have pulse area above 10 phe, such that each $^{83m}$Kr event is defined to have exactly one candidate S2 and at least one candidate S1.  After the event selection is complete, a region of interest (ROI) beginning at the first candidate S1 and ending at the start of the S2 (or after 150 samples) is defined. The ROI is then used to select sumpod data from the evt files within the ROI.  This data is  fit to a double exponential function which returns the pulse area and maximum fractional area of the S1a and S1b peaks, as well as the time separation between them (Figure~\ref{fig:Sumpod}). We can not produce reasonable fits for events in which the S1a and S1b decays are separated by less than 130 nanoseconds, so a cut requiring the separation between S1a and S1b events to be great than this is applied  (Figure~\ref{fig:S1aS1btiming}).
 
 \begin{figure}
-\includegraphics[scale=0.4]{Run04Corrections/s1a_s1b_sumpod.png}
+\includegraphics[scale=0.4]{KrypCalFigs/S1abS2_sumpod_040317_2.png}
 \captionof{figure}{Sumpod versus time for a $^{83m}$Kr in which a distinct S1a and S1b peak have been observed. In this case, the fit finds an S1a area of 174 phe, an S1b area of 64.5 phe, and a separation in time of 35 samples.}
  \label{fig:Sumpod}
 \end{figure}
 
 \begin{figure} [!h]
 \centering
-\subfloat{{\includegraphics[width=7cm]{Run04Corrections/S1aS1bCut_Timing.png} }}
+\subfloat{{\includegraphics[width=7cm]{KrypCalFigs/S1aS1bCut_Timing_1.png} }}
 \qquad
-\subfloat{{\includegraphics[width=7cm]{Run04Corrections/S1aS1bCut.png} }}
+\subfloat{{\includegraphics[width=7cm]{KrypCalFigs/S1aS1bCut.png} }}
 \caption{ (Top) The output of the S1a/S1b fitting module as a function of time separation between the two decays.  The red line indicate the minimum separation between the S1a and S1b events required by our cut in this analysis. (Bottom) A scatter plot of all S1a and S1b pulse areas measured by the fitting module (black) compared to the S1a and S1b pulse areas that are left after our selection cut. (red)}
 \label{fig:S1aS1btiming}
 \end{figure}
@@ -111,7 +111,7 @@ As we did when measuring the strength of the field effect, we also take a separa
 We relate the Z dependence and three dimensional dependence maps of the S1a/S1b ratio to the Z dependence and three dimensional dependence maps of the S2 field effect measured in section \ref{section:FieldEffects}.  A second order polynomial is fit to the spatial dependence of the $^{83m}$Kr S2$_E$ (induced by the field effect) to S1a/S1b relationship, with best fit parameters of $a=-0.499 \pm 0.117$,$b=1.48 \pm 0.615$, and $c=0.667 \pm 0.946$ for the second order, first order, and zeroth order terms, respectively. This polynomial is used to determine the strength of the field effect in $^{83m}$Kr S2 data at all points in time.  We find that the Z dependence and three dimensional maps agree closely within the range of measured S1a/S1b ratios, but begin to diverge in the extrapolated regions (Figure \ref{fig:S1aS1bField_S2}). 
 
 \begin{center}
-\includegraphics[scale=0.4]{Run04Corrections/S1aS1bvField_ZDep_3D_S2Only.png}
+\includegraphics[scale=0.4]{KrypCalFigs/S1aS1bvField_ZDep_3D_S2Only.png}
 \captionof{figure}{The Z (dark red) and three dimensional (light red) relationship of the $^{83m}$Kr S1a/S1b ratio to the $^{83m}$Kr S2$_E$ field effect.}
  \label{fig:S1aS1bField_S2}
 \end{center}
@@ -149,7 +149,7 @@ The result of this is shown in Figure \ref{fig:S1FieldFig}.  It is possible that
 
 
 \begin{figure}
-\includegraphics[scale=0.4]{Run04Corrections/S1aS1bvField_ZDep_3D.png}
+\includegraphics[scale=0.4]{KrypCalFigs/S1aS1bvField_ZDep_3D.png}
 \captionof{figure}{The Z (black) and three dimensional (grey) relationship of the $^{83m}$Kr S1a/S1b ratio to the $^{83m}$Kr S1 field effect.  The black and grey data points are not measured, but instead inferred from the Z (dark red) and three dimensional (light right) relationship of the $^{83m}$Kr S1a/S1b ratio to the $^{83m}$Kr S2$_E$ field effect.}
  \label{fig:S1FieldFig}
 \end{figure}
@@ -176,7 +176,7 @@ Any residual spatial variation in the detector inefficiency corrected combined S
 
 \begin{minipage}{8.15cm}
 \begin{center}
-\includegraphics[scale=0.4]{Run04Corrections/MatthewS1FieldEffectMeasurement.png}
+\includegraphics[scale=0.4]{KrypCalFigs/MatthewS1FieldEffectMeasurement.png}
 \captionof{figure}{The strength of the S1 field effect measured in this section (grey) compared to the strength of the S1 field effect measured in section \ref{section:S1relation2} (blue).  The large error bars on the data are due to systematic uncertainties in the field maps detector inefficiency corrections.}
 \label{S1aFieldEffect}
 \end{center}
@@ -219,7 +219,7 @@ We have directly measured the strength of the field effect in $^{83m}$Kr S2 data
 
 
 \begin{center}
-\includegraphics[scale=0.4]{Run04Corrections/StrengthOfFieldEffectOverlay.png}
+\includegraphics[scale=0.4]{KrypCalFigs/StrengthOfFieldEffectOverlay.png}
 \captionof{figure}{The S1a/S1b to field effect relationships measured in this work.  The method to measure each line is indicated by the color in the legend.  Red shades indicate measurements of the strength of the field effect in  $^{83m}$Kr S1 data, and blue shades indicate the strength of the field effect in  $^{83m}$Kr S2 data. Solid lines represent measurements that are used in KrypCal, and dashed lines represent measurements that are supplementary cross checks. }
  \label{AllMeasurements}
 \end{center}
