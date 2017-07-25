@@ -55,9 +55,9 @@ The $\chi^2$ method presented in section \ref{section:S1relation2} finds an aver
 
 \begin{figure}
 \centering
-\subfloat{{\includegraphics[width=6.5cm]{KrypCalFigs/KrEnergy.png} }}
+\subfloat{{\includegraphics[width=6.5cm]{figures/KrEnergy.png} }}
 \qquad
-\subfloat{{\includegraphics[width=6.5cm]{KrypCalFigs/KrEnergyZDep.png} }}
+\subfloat{{\includegraphics[width=6.5cm]{figures/KrEnergyZDep.png} }}
 \caption{ (Left) The energy spectrum of $^{83m}$Kr data in September 2014 (red) and September 2015(blue) after determining the S1 field effect to S1a/S1b relationship from the reduced $\chi^2$ method. The energy spectrum is expected to be a Gaussian distribution centered around the black line.  (Right) The Z dependence of the $^{83m}$Kr energy peaks in September 2014 (red) and September 2015 (black).}
 \label{Kr2p22_KrE}
 \end{figure}
@@ -66,8 +66,8 @@ The CH$_3$T energy spectra from calibrations in September 2014, November 2014, F
 
 
 \begin{figure}
-%\includegraphics[scale=0.4]{KrypCalFigs/KrypCal_2p22_AllCH3TEnergy.png}
-\includegraphics[scale=0.4]{KrypCalFigs/CH3T_energy_wres_sep2015.png}
+%\includegraphics[scale=0.4]{figures/KrypCal_2p22_AllCH3TEnergy.png}
+\includegraphics[scale=0.4]{figures/CH3T_energy_wres_sep2015.png}
 \captionof{figure}{The September 2015 CH$_3$T energy spectra resulting from KrypCal corrections.}
  \label{Kr2p22_H3E}
 \end{figure}
@@ -80,7 +80,7 @@ A version of the corrections which do not acknowledge the spatial and time depen
 The $\chi^2$ method presented in section \ref{section:S1relation2} finds best fit values of $g_1=0.098 \pm 0.001$ and $EE=0.808 \pm 0.029$.  This is consistent with our expectations of an extraction efficiency between 0.6 and 0.8, based on our extraction field models and the liquid level, and is much better than the $g_1=0.100 \pm 0.001$ and $EE=1.08 \pm 0.030$ result found in section \ref{Result:Spectra}.  Likewise, the best fit value of $g_1$ is within one sigma of our expectation of g$_1$=0.108 $\pm$ 0.010 found in section \ref{G1pred}. 
 
 \begin{center}
-\includegraphics[scale=0.3]{Run04Corrections/GuschinEE.png}
+\includegraphics[scale=0.3]{figures/GuschinEE.png}
 \captionof{figure}{The expected extraction efficiency based on the electric field map.  The expectation is derived from a Guschin curve, and is dependent on the height of the liquid above the gate.  The exact liquid level is unknown, so a range of possible values is depicted.}
  \label{EEexpec}
 \end{center}
@@ -91,7 +91,7 @@ The $\chi^2$ method presented in section \ref{section:S1relation2} finds best fi
 The nonuniform field in the LUX detector produces higher recombination of $^{83m}$Kr events in the bottom of the detector.  This results in an attenuation of the $^{83m}$Kr S2 signal that is directly proportional to drift time.  This effect mimics the attenuation of the $^{83m}$Kr S2 signal produced by impurities capturing charge as it drift to the top of the detector.  As a result, when field effects are not properly accounted for in a $^{83m}$Kr calibration, the electron lifetime is drastically underestimated.  The version of the corrections which does not account for field effects in WS2014-16 measured electron lifetimes below 350 $\mu$seconds at all points in time.  This problem is rectified by the methods presented here, which measure accurately measure the electron lifetime to be as high as a few milliseconds (Figure~\ref{fig:KrypCalLifetime}). The higher values of electron lifetimes have been confirmed by a separate, low energy $^{37}$Ar injection performed at the end of LUX's WS2014-16 data collection.
 
 \begin{center}
-\includegraphics[scale=0.4]{KrypCalFigs/LUX_eLifetime_Kr2p22.png}
+\includegraphics[scale=0.4]{figures/LUX_eLifetime_Kr2p22.png}
 \captionof{figure}{The electron lifetime over WS2014-16 found by fitting an exponential to the S2$_F$ Z dependence.  Red areas indicate circulation outages.  At high lifetimes the S2$_F$ Z dependence is less exponential, leading to larger errors on the measurement.}
  \label{fig:KrypCalLifetime}
 \end{center}
@@ -102,9 +102,9 @@ Nuclear recoils are much less sensitive to field variation effects in the detect
 
 \begin{figure}
 \centering
-\subfloat{{\includegraphics[width=6.5cm]{KrypCalFigs/NRband_run3.png} }}
+\subfloat{{\includegraphics[width=6.5cm]{figures/NRband_run3.png} }}
 \qquad
-\subfloat{{\includegraphics[width=6.5cm]{KrypCalFigs/NRband_run4.png} }}
+\subfloat{{\includegraphics[width=6.5cm]{figures/NRband_run4.png} }}
 \caption{ (Top) The Z dependence of the NR band mean using a version of KrypCal which does not properly account for field effects. (Bottom) The Z dependence of the NR band mean from the same datasets using a version of KrypCal which does properly account for field effects.  }
 \label{NRBandZ}
 \end{figure}
@@ -117,9 +117,9 @@ The electron recoil band that results from the corrections which do account for 
 
 \begin{figure} 
 \centering
-\subfloat{{\includegraphics[width=6.5cm]{KrypCalFigs/Sep2015_VoxelizedBands_WithUpperLower.png} }}
+\subfloat{{\includegraphics[width=6.5cm]{figures/Sep2015_VoxelizedBands_WithUpperLower.png} }}
 \qquad
-\subfloat{{\includegraphics[width=6.5cm]{KrypCalFigs/OverlayOfAllERBands.png} }}
+\subfloat{{\includegraphics[width=6.5cm]{figures/OverlayOfAllERBands.png} }}
 \caption{ (Left) The spatial variation of the KrypCal corrected ER band from September 2015.  The black band represents the total, unbinned ER band and the grey bands represent the ER band from each voxel. (Right) The time dependence of the total, unbinned ER band as measured by the KrypCal corrected data at four points in time.}
 \label{ERBandVariation}
 \end{figure}
@@ -130,16 +130,16 @@ Figure~\ref{Feb2016ERPred} shows the close agreement between the ER band predict
 
 \begin{figure} 
 \centering
-\subfloat{{\includegraphics[width=6.5cm]{KrypCalFigs/PowerLawExponent.png} }}
+\subfloat{{\includegraphics[width=6.5cm]{figures/PowerLawExponent.png} }}
 \qquad
-\subfloat{{\includegraphics[width=6.5cm]{KrypCalFigs/PowerLawCoefficient.png} }}
+\subfloat{{\includegraphics[width=6.5cm]{figures/PowerLawCoefficient.png} }}
 \caption{ (Left) The measured relationship between S1a/S1b and the ER band power law exponent. (Right) The measured relationship between S1a/S1b and the ER band power law coefficient. The light blue region indicates one $\sigma$ uncertainties on each fit.}
 \label{ERBand_S1aS1bToER}
 \end{figure}
 
 
 \begin{center}
-\includegraphics[scale=0.45]{KrypCalFigs/Feb2016_ERPrediction.png}
+\includegraphics[scale=0.45]{figures/Feb2016_ERPrediction.png}
 \captionof{figure}{Monte Carlo data for the February 2016 ER band generated from S1a/S1b using the relationship found in Figure \ref{ERBand_S1aS1bToER}.  A fit to the Monte Carlo data is shown in blue, and a fit to the actual calibration data (not shown) is shown in red.}
  \label{Feb2016ERPred}
 \end{center}
