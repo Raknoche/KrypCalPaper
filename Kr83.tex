@@ -1,4 +1,44 @@
 
+
+\subsection{$^{83m}$Kr as an electric field probe} \label{section:S1aS1b1}
+
+
+$^{83m}$Kr has been determined to be an ideal probe of the magnitude of the LUX TPC drift field. Detector efficiency effects cancel precisely in the S1a/S1b ratio, because the two decays occur at the same location in the detector, while the effect of the electric field on the S1a and S1b light yields is quite different, resulting in an excellent field observable. In this section we describe how we measure the S1a/S1b ratio, and how it relates to the absolute field determined by the COMSOL field map~\cite{luciespaper}.
+
+
+%Once we have measured the strength of the field effect from the $^{83m}$Kr S2$_E$ data at one point in time, we need to develop a method to track the field effect at all points in time.  To accomplish this, we use the uncorrected S1 pulse area from the 32.1 keV and 9.4 keV decays within $^{83m}$Kr events, referred to as S1a and S1b respectively.  As discussed in section \ref{section:Intro}, as the electric field increases the probability of recombination decreases, leading to a smaller S1 signal.  The S1a decay is more sensitive to this effect due to its higher energy, leading to a stronger field effect in the S1a data than in the S1b data.   Therefore, an inverse relationship exists between the strength of the field and the S1a/S1b ratio.  
+
+%comment: the S2 pulse are selection is made on S2bottom.
+
+We select $^{83m}$Kr events with exactly one S2 between 2000 to 60000~phd, and one or more S1 candidates greater than 10~phd occurring before the S2. We fit a double exponential to the S1 candidates and extract their pulse area and the time between decays. To ensure a good measurement of the S1a and S1b pulse areas, we require the time difference to be greater than 130~ns. The PMT waveforms from a typical event is shown in Fig.~\ref{fig:sumpod}.
+
+
+\begin{figure}
+\includegraphics[scale=0.4]{figures/Fig2.png}
+\captionof{figure}{S2 (upper) and S1 (lower) PMT waveforms from a typical $^{83m}$Kr decay, normalized to one. Two events with differing decay times are shown. Note the distinct time scales on the S2 and S1 plot axes. The 32.1~keV and 9.4~keV decays are distinct in S1, but are summed together in S2 due to the $\sim$microsecond collection time of the S2 anode region. Although the S2 signals are required to follow the S1 signals in time, for clarity the S2 signals are shown here centered on $t=0$.}
+ \label{fig:Sumpod}
+\end{figure}
+
+To map the observed electric field in terms of S1a/S1b, we divide the  $^{83m}$Kr data from September 2015 
+into voxels of XXX x YYY x ZZZ dimension. We fit a Gaussian to S1a/S1b ratio in each voxel and plot the mean vs detector radius and $z$ in 
+Figure~\ref{fig:s1as1bmap}. The S1a/S1b ratio is observed to follow closely the electric field pattern from the COMSOL model for the same date. In Figure~\ref{fig:s1as1bvsfield} we plot the electric field from the model in each detector voxel vs S1a/S1b in the September 2015 data. A clear correlation is seen with the expected trend: higher electric fields reduce the light yield of the 32.1~keV decay while having only a modest effect on the 9.4~keV decay, resulting in a smaller value of S1a/S1b. The trend is replicated in other $^{83m}$Kr datasets collected at various times throughout the physics run under varying electric field conditions. We fit a function to the data shown in the Figure and find XXXXX.
+
+
+
+%\begin{figure} [!h]
+%\centering
+%\subfloat{{\includegraphics[width=7cm]{figures/Fig3a.png} }}
+%\qquad
+%\subfloat{{\includegraphics[width=7cm]{figures/Fig3b.png} }}
+%\caption{ (Top) The output of the S1a/S1b fitting module as a function of time separation between the two decays.  The red line indicate the minimum separation between the S1a and S1b events required by our cut in this analysis. (Bottom) A scatter plot of all S1a and S1b pulse areas measured by the fitting module (black) compared to the S1a and S1b pulse areas that are left after our selection cut. (red)}
+%\label{fig:S1aS1btiming}
+%\end{figure}
+
+
+
+
+
+
 \section{Signal Corrections in a Nonuniform Drift Field}\label{section:GenStrat}
 
 In LUX's WS2014–16 data, pulse area corrections must account for field effects as a function of time, space, energy, and recoil type.  Since the recoil type of an event in WIMP search data is unknown, and the energy of an event in WIMP search data is unknown prior to pulse area corrections being applied, it is not possible to remove the spatial and time dependence induced by the field effects in our data.  Instead, we seek to separate the field effects from the detector inefficiency effects at the known energy and recoil type of $^{83m}$Kr, so that we can extract detector efficiency corrections that are applicable to all events from said data.  This separation must be performed at all points in time due to the time dependence of the electric field.  To accomplish this we relate the strength of the field effects in the S1 and S2 pulse areas of $^{83m}$Kr calibration data to the ratio of the two S1 pulses (referred to as S1a and S1b) generated during the $^{83m}$Kr decay.  This ratio is strongly correlated with the strength of the electric field, since the two $^{83m}$Kr decays have different energies (32.1 keV for S1a and 9.4 keV for S1b) and are therefore effected by the field effects by different amounts.  Note that corrections which perfectly separate field effects from detector inefficiency effects in this manner, and only correct for the latter, will have a spatial and time dependence left in the S1 and S2 signals but not in the energy spectra or gain factors for any data, regardless of energy or recoil type.
@@ -80,28 +120,6 @@ We define the strength of the field effect in the z direction as the ratio of th
 \end{equation} 
 
 We also take a separate, three dimensional approach to mapping the field effect in the $^{83m}$Kr S2$_E$ data. In this approach the detector is divided into three dimensional voxels, with X and Y width of 3.5 cm and Z width of 30 $\mu$seconds.  As in the one dimensional case, a three dimensional map of the field induced S2$_E$ pulse area variation is produced by fitting a Gaussian distribution to the $^{83m}$Kr S2$_E$ data in each voxel.  A spline interpolation is used to determine the S2$_E$(xyz)/S2$_E$(center) ratio between the three dimensional voxels, and the S2$_E$(xyz)/S2$_E$(center) Z dependence map is used to extrapolate outside of the range of the voxels.  As shown in Figure~\ref{fig:S1aS1bField_S2}, the results are consistent between both measurements.
-
-\subsection{Measuring the S1a and S1b Pulse Areas in $^{83m}$Kr data} \label{section:S1aS1b1}
-
-Once we have measured the strength of the field effect from the $^{83m}$Kr S2$_E$ data at one point in time, we need to develop a method to track the field effect at all points in time.  To accomplish this, we use the uncorrected S1 pulse area from the 32.1 keV and 9.4 keV decays within $^{83m}$Kr events, referred to as S1a and S1b respectively.  As discussed in section \ref{section:Intro}, as the electric field increases the probability of recombination decreases, leading to a smaller S1 signal.  The S1a decay is more sensitive to this effect due to its higher energy, leading to a stronger field effect in the S1a data than in the S1b data.   Therefore, an inverse relationship exists between the strength of the field and the S1a/S1b ratio.  
-
-To measure the size and location of the S1a and S1b decays, we select $^{83m}$Kr events with an S2 pulse area pulse area between 2000 to 60000 phe as measured by the bottom PMT array.  We identify S1 candidates that have pulse area above 10 phe, such that each $^{83m}$Kr event is defined to have exactly one candidate S2 and at least one candidate S1.  After the event selection is complete, a region of interest (ROI) beginning at the first candidate S1 and ending at the start of the S2 (or after 150 samples) is defined. The ROI is then used to select sumpod data from the evt files within the ROI.  This data is  fit to a double exponential function which returns the pulse area and maximum fractional area of the S1a and S1b peaks, as well as the time separation between them (Figure~\ref{fig:Sumpod}). We can not produce reasonable fits for events in which the S1a and S1b decays are separated by less than 130 nanoseconds, so a cut requiring the separation between S1a and S1b events to be great than this is applied  (Figure~\ref{fig:S1aS1btiming}).
-
-\begin{figure}
-\includegraphics[scale=0.4]{figures/Fig2.png}
-\captionof{figure}{Sumpod versus time for a $^{83m}$Kr in which a distinct S1a and S1b peak have been observed. In this case, the fit finds an S1a area of 174 phe, an S1b area of 64.5 phe, and a separation in time of 35 samples.}
- \label{fig:Sumpod}
-\end{figure}
-
-\begin{figure} [!h]
-\centering
-\subfloat{{\includegraphics[width=7cm]{figures/Fig3a.png} }}
-\qquad
-\subfloat{{\includegraphics[width=7cm]{figures/Fig3b.png} }}
-\caption{ (Top) The output of the S1a/S1b fitting module as a function of time separation between the two decays.  The red line indicate the minimum separation between the S1a and S1b events required by our cut in this analysis. (Bottom) A scatter plot of all S1a and S1b pulse areas measured by the fitting module (black) compared to the S1a and S1b pulse areas that are left after our selection cut. (red)}
-\label{fig:S1aS1btiming}
-\end{figure}
-
 \subsection{Relating the S1a/S1b Ratio to S2 Field Effects} \label{section:S1aS1b2}
 
 To relate the S1a/S1b ratio to the S2 field effects measured in section \ref{section:FieldEffects} we begin by measuring the spatial dependence of the S1a/S1b ratio.  We first divide the detector into drift time bins of 3 $\mu$second width.   A Gaussian distribution is fit to the S1a and S1b spectrum of each bin to determine the mean pulse areas versus Z.   A second order polynomial is fit to the ratio of the Gaussian means versus Z and is used to determine the S1a/S1b ratio at any drift time in the detector.  
