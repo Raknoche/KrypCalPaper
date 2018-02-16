@@ -1,39 +1,24 @@
 
 
-\subsection{$^{83m}$Kr as an electric field probe} \label{section:S1aS1b1}
+\section{$^{83m}$Kr as an electric field probe} \label{section:S1aS1b}
 
 
-$^{83m}$Kr is ideally suited as a probe of the TPC electric field. As a short lived noble gas, 
-it can be injected frequently into the detector without harm, and it mixes uniformly 
-into the detector volume within minutes. Efficiency effects cancel in the S1a/S1b ratio, 
-because the two decays occur at the same location in the detector. 
-Both decays are electron events, so the only variable in
-the S1a/S1b ratio, besides statistical fluctuations, is the magnitude of the electric field at the decay location.
-
-In this section we report the relationship between S1a/S1b and the absolute electric field as 
-calculated by the COMSOL field model described in Ref.~\cite{lucie}. Knowledge of the absolute electric field and its 
-relationship to S1a/S1b is useful for comparing LUX data to predictions from the NEST framework, 
-however it is not critical for applying efficiency corrections to the LUX WIMP search. 
-As described in Sec.~\ref{sec:corrections}, we directly characterize those corrections as 
-functions of S1a/S1b alone.
-
-We select $^{83m}$Kr events with exactly one S2 between 2000 to 60000~phd, and one or more S1 candidates 
-greater than 10~phd occurring before the S2. We fit a double exponential to the S1 candidates and 
-extract their pulse area and the time between decays. To ensure a good measurement of the 
-S1a and S1b pulse areas, we require the time difference to be greater than 130~ns. As shown
-in Fig.~\ref{fig:sumpod}, the S1 waveforms from a typical $^{83m}$Kr event show distinct
-(a) and (b) decays because the scintillation time constant and detector response time is
-tens of nanoseconds, substantially shorter than the 154~nanosecond half life of the $^{83m}$Kr
-intermediate state. The S2 waveforms, however, represent the sum of the charge from both decays, because
-the anode collection time is several microseconds.
+%The resulting nonuniform drift field introduced a second source of position dependent signal variations.  During a recoil event, ionizing radiation produces both ionization and excitation of the xenon atoms.  The xenon excimers (Xe$_2^*$) produce scintillation light as they return to the ground state, which we observe as our S1 signal. Some of the electrons produced during ionization escape the location of the event, drift to the top of our detector, and produce our S2 signal.  The electrons that do not escape the event recombine with the ionized xenon atoms in a process called recombination, producing additional xenon excimers that contribute to the S1 signal.  Recoil events which occur in a lower field region of the detector have a higher chance to recombine, and therefore produce more S1 signal and less S2 signal than an equivalent event in a high field region.  The strength of this effect is dependent on the energy of the event and whether the event is an electron recoil (ER) or a nuclear recoil (NR) (Figure \ref{fig:LYQY}).  Note that these energy and recoil-dependent signal variations will be referred to as "field effects" in this paper.  
 
 
 
-%Once we have measured the strength of the field effect from the $^{83m}$Kr S2$_E$ data at one point in time, we need to develop a method to track the field effect at all points in time.  To accomplish this, we use the uncorrected S1 pulse area from the 32.1 keV and 9.4 keV decays within $^{83m}$Kr events, referred to as S1a and S1b respectively.  As discussed in section \ref{section:Intro}, as the electric field increases the probability of recombination decreases, leading to a smaller S1 signal.  The S1a decay is more sensitive to this effect due to its higher energy, leading to a stronger field effect in the S1a data than in the S1b data.   Therefore, an inverse relationship exists between the strength of the field and the S1a/S1b ratio.  
 
-%comment: the S2 pulse are selection is made on S2bottom.
-
-
+The decay properties of $^{83m}$Kr events are described in detail in Ref.~\cite{scottspaper}. Here we note 
+that the decay proceeds as two mono-energetic electromagnetic depositions with energies of 
+32.1~keV and 9.4~keV. The half-life of the intermediate metastable state is 154~ns. In a two-phase LXe
+TPC such as LUX, the S1 signals of the two decays can be distinguished
+in most events because the ~nanosecond timing resolution of the PMTs 
+is much faster than the half-life of the intermediate state.  We refer
+to the two S1 signals as S1a (32.1~keV) and S1b (9.4~keV). 
+The charge signals of the two decays, however, are indistinguishable, being integrated
+by the microsecond collection time of the detector anode. 
+These facts are illustrated for two representative $^{83m}$Kr events 
+in Fig.~\ref{fig:Sumpod}. 
 
 
 \begin{figure}
@@ -42,18 +27,63 @@ the anode collection time is several microseconds.
  \label{fig:Sumpod}
 \end{figure}
 
-We construct an S1a/S1b map for the September 2015 calibration data by dividing the detector into three dimensional voxels 
-of XXX x YYY x ZZZ dimension. We fit Gaussians to the S1a and S1b histograms in each voxel and take the ratio of the fitted means.  
-Figure~\ref{fig:s1as1bmap} shows the resulting map, which is observed to follow closely the electric field pattern from the COMSOL model for the same date.
- A scatter plot of the electric field vs S1a/S1b in each detector voxel for the September 2015 data is shown in Figure~\ref{fig:s1as1bvsfield}.
-As expected, an inverse relationship is observed, since higher electric fields reduce the light yield of the 32.1~keV (a) decay 
-much more than that of the 9.4~keV (b) decay. The same functional form is 
-replicated in other $^{83m}$Kr datasets collected throughout the physics run under 
-varying electric field conditions. 
-We fit a function to the September 2015 data as shown in the Figure and find XXXXX.
+
+The average S1a and S1b pulse areas vary in space and time owing to the imperfect light collection
+efficiency of the detector, however the event-by-event ratio
+S1a/S1b is insensitive to such variations because correlated decays from the same $^{83m}$Kr 
+parent atom occur at the same location and at virtually the same time. 
+These statements remain approximately true 
+when historgramming S1a and S1b measurements separately 
+in a small volume element (voxel) of the active detector over several hours of $^{83m}$Kr data
+and taking the ratio of histogram averages.
+Since the two decays are mono-energetic
+and of a uniform type (both electromagnetic), both the event-by-event S1a/S1b 
+and its voxel-averaged counterpart depend only on 
+the local electric field and the detector resolution for S1 scintillation. 
+Higher fields act to suppress the lights yields of both decays, but the suppression is stronger
+for the 32.1~keV S1a decay, resulting in an inverse relationship between the true local 
+electric field and the S1a/S1b ratio. 
+
+We have determined the correspondence between S1a/S1b and the true electric
+field with LUX data.
+We select $^{83m}$Kr events from the September 2015 LUX calibration campaign
+with exactly one S2 between 2000 to 60000~phd, and one or more S1 candidates 
+greater than 10~phd occurring before the S2. We fit a double exponential to the S1 candidates and 
+extract their pulse area and the time between decays. To ensure a good measurement of the 
+S1a and S1b pulse areas, we require the time difference to be greater than 130~ns. 
+We fit Gaussians to the S1a and S1b histograms in each voxel and take the ratio of the fitted means. 
+We query the September 2015 COMSOL field model described in 
+Ref.~\cite{luciespaper} to determine the 
+true electric field of each voxel for each $^{83m}$Kr dataset. 
+A scatter plot of the electric field vs S1a/S1b in each detector voxel for September 2015 
+is shown in Figure~\ref{fig:s1as1bvsfield}, for field values between XXX and YYY V/cm. 
+The same functional form is  observed in other $^{83m}$Kr datasets 
+collected throughout Run 4 under 
+varying detector electric field conditions. We fit a function to the September 2015 data as 
+shown in the Figure and find XXXXX.
 
 
 
+%\begin{center}
+%\includegraphics[scale=0.48]{figures/Fig1.png}
+%\captionof{figure}{LUX electric field map for September 2015, determined with a COMSOL\cite{comsol} electrostatic model compared drift trajectory data, as described in \cite{lucie}.}
+%\label{fig:FieldMapExample}
+%\end{center}
+
+Once the field smoothing functions are known, 
+knowledge of the absolute electric field is not needed to apply them
+to LUX $^{83m}$Kr calibration data, nor for applying detector corrections
+to WIMP search data. In fact, as will be shown in Sec.~\ref{sec:corrections}, 
+we characterize field-smoothing directly as a function of
+S1a/S1b, as a proxy for electric field, 
+and we apply detector efficiency corrections as functions of the event drift time. 
+Knowledge of the true electric field is useful for other purposes, however,
+such as when comparing LUX data to light and charge yield expectations from the NEST framework, 
+and when comparing to other experiments, which may operate at a different electric field value. 
+It is worth noting that any LXe detector with $^{83m}$Kr calibration data and sufficient
+timing to separate S1a and S1b should be able to make use of Fig.~\ref{fig:s1as1b-electric-field}
+to infer its true electric field \emph{in situ}, since the relationship depends only on the 
+fundamental light yields of LXe at 32.1 and 9.4~keV.
 
 
 %\begin{figure} [!h]
@@ -68,18 +98,82 @@ We fit a function to the September 2015 data as shown in the Figure and find XXX
 
 
 
+\section{Measurement of the $^{83m}$Kr field-smoothing functions}
+\label{section:GenStrat}
+
+In this section we describe how the $^{83m}$Kr field-smoothing functions are derived from LUX calibration data.
+
+Because it was injected twice per week, producing $10^5$ to $10^6$ of events per injection, the LUX $^{83m}$Kr calibration data is 
+by far the richest dataset in the LUX catalog for tracking detector performance and behavior over time. In addition to these frequent calibrations, 
+LUX also carried out periodic calibration campaigns with a suite of complementary calibration sources. These campaigns made use itritium, 
+$^{137}$Cs, and neutron sources, in addition to large $^{83m}$Kr injections. Four such campaigns were carried out during Run 4: in XXX 2014, 
+XXX 2015, XXX 2015, and XXX 2016. In this section we derive the field-smoothing functions making use of the September 2015 
+calibration campaign data. This campaign produced large statistics for both $^{83m}$Kr and tritium, and occurred roughly in the middle of WS2014-16.
+
+For clarity we begin by showing the S1 and S2 field smoothing functions in Fig.~\ref{fig:AllMeasurements} and describing 
+their use. To field smooth a particular $^{83m}$Kr calibration dataset, the $^{83m}$Kr S1 and S2 signals in each detector $z$-slice
+are divided by the scale factors shown in the figure, based upon the S1a/S1b 
+ratio observed locally in that slice. The two functions have opposite slopes because increasing the electric field has 
+opposite effects on charge and scintillation yields. (In the figure, increasing S1a/S1b corresponds to decreasing electric field.)
+The functions cross with a value of unity for an S1a/S1b of XXXX, which corresponds to our standard field value of XXX V/cm. 
+This field was obtained in the center of LUX during the September 2015 campaign. Although the two functions display
+the well known anti-correlation of light and charge yields in LXe as a function of field, they are not multiplicative inverses of each other
+numerically because the average electron recoil yields are not equivalent at 41.5~keV and XXX V/cm. 
+
+Note that although the field smoothing functions are measured with September 2015 LUX data, they are applicable
+to $^{83m}$Kr data in any LXe TPC over the range of electric fields probed by LUX. In particular, they apply equally well to the 
+remaining LUX $^{83m}$Kr calibration data, data that was not used in their derivation.
+
+\begin{center}
+\includegraphics[scale=0.4]{figures/Fig7.png}
+\captionof{figure}{The S1a/S1b to field effect relationships measured in this work.  The method to measure each line is indicated by the color in the legend.  Red shades indicate measurements of the strength of the field effect in  $^{83m}$Kr S1 data, and blue shades indicate the strength of the field effect in  $^{83m}$Kr S2 data. Solid lines represent measurements that are used in KrypCal, and dashed lines represent measurements that are supplementary cross checks. }
+ \label{AllMeasurements}
+\end{center}
 
 
-\section{Signal Corrections in a Nonuniform Drift Field}\label{section:GenStrat}
+\subsection{Measurement of the S2 field smoothing function using tritium data}
 
-In LUX's WS2014–16 data, pulse area corrections must account for field effects as a function of time, space, energy, and recoil type.  Since the recoil type of an event in WIMP search data is unknown, and the energy of an event in WIMP search data is unknown prior to pulse area corrections being applied, it is not possible to remove the spatial and time dependence induced by the field effects in our data.  Instead, we seek to separate the field effects from the detector inefficiency effects at the known energy and recoil type of $^{83m}$Kr, so that we can extract detector efficiency corrections that are applicable to all events from said data.  This separation must be performed at all points in time due to the time dependence of the electric field.  To accomplish this we relate the strength of the field effects in the S1 and S2 pulse areas of $^{83m}$Kr calibration data to the ratio of the two S1 pulses (referred to as S1a and S1b) generated during the $^{83m}$Kr decay.  This ratio is strongly correlated with the strength of the electric field, since the two $^{83m}$Kr decays have different energies (32.1 keV for S1a and 9.4 keV for S1b) and are therefore effected by the field effects by different amounts.  Note that corrections which perfectly separate field effects from detector inefficiency effects in this manner, and only correct for the latter, will have a spatial and time dependence left in the S1 and S2 signals but not in the energy spectra or gain factors for any data, regardless of energy or recoil type.
+We first derive the S2 field smoothing function from the September 2015 calibration campaign data,
+making use of contemporaneous tritium data to derive S2 detector efficiency corrections 
+for this time period. Tritium's advantage over $^{83m}$Kr is that the field dependence of its light and charge 
+yield is already well-modeled by NEST, due to the measurements reported in Ref.~\cite{tritium}.
+We query the COMSOL field model for September 2015 in each detector voxel, and we use the NEST description of
+charge and light yields as a function of electric field to field-smooth this tritium dataset.
+Because the electric field dependence of the tritium yields is very modest (owing to the low energy of these events 
+and low recombination), field-smoothing has only a small
+effect on the tritium data. In this respect tritium is superior to $^{83m}$Kr as a detector monitoring calibration source. 
+As a beta decay source, tritium does not provide a narrow line that can act as an ideal recognizable 
+feature for extracting corrections, but its broad maximum at XXX~keV, 
+is sufficient for our narrow and modest purpose. 
 
-The general strategy for measuring and separating the electric field effects in $^{83m}$Kr calibrations is as follows.  First, we measure the electric field in the detector at a particular point in time, using the methods described in reference \ref{LuciesPaper}.  We would like to use this field map in conjunction with NEST to remove the field effects in the $^{83m}$Kr data directly before measuring detector inefficiency effects.  Unfortunately, due to the complicated nature of the $^{83m}$Kr decay NEST does not accurately simulate $^{83m}$Kr data.  Instead we turn to CH$_3$T data, which NEST has been tuned to simulate extremely well.  
+After NEST-guided field-smoothing is applied to the September 2015 tritium data, the S2 correction
+is extracted as a function of $z$ and applied to the $^{83m}$Kr data from the same time period, leaving
+only field effects in the $^{83m}$Kr data. The 
+S2-corrected $^83m$Kr data is then subdivided into voxels, and the ratio of the average 
+S2 signal in each voxel to that at the center of the detector is plotted versus the S1a/S1b. In total XXX
+voxels are employed to define the S2 field-smoothing function. The quadratic fit function is 
 
-After using NEST to determine and remove the strength of the field effects in CH$_3$T data we measure the residual pulse area variation in the S2 signal and produce corrections for these effects, which, since the field effects have been removed, are due to detector inefficiencies alone.  These detector inefficiency corrections are equivalent to the Run03 corrections which were obtained directly from $^{83m}$Kr data in~\cite{Run03Reanalysis}.  Next, we apply the detector inefficiency corrections to contemporaneous $^{83m}$Kr data.  At this point, any residual pulse are variation in the $^{83m}$Kr S2 signal is due to field effects alone.  We measure the strength of the field effects by fitting Gaussian distributions to the inefficiency corrected $^{83m}$Kr S2 signal over a three dimensional map, choosing the ratio S2(XYZ)/S2(Center) as the figure of merit for the strength of the field effect.  At the same time we measure a three dimensional map of the $^{83m}$Kr S1a/S1b ratio.  Relating these two maps allows us to determine the strength of the field effect on $^{83m}$Kr S2 data taken at any time or location by simply measuring the $^{83m}$Kr S1a/S1b ratio. 
+ \begin{multline}
+\frac{S2_{E,Kr}(xyz)}{S2_{E,Kr}(center)} =   \\ -0.499 \left(\frac{S1a}{S1b} \right)^2 + 1.48  \left(\frac{S1a}{S1b} \right) + 0.667
+\end{multline}
+
+\noindent
+and it is plotted in Fig.~\ref{fig:AllMeasurements}.
+
+\subsection{Measurement of the S1 field smoothing function using tritium data}
 
 
-The same process can not be repeated for the S1 signal, since the maximum of the CH$_3$T S1 spectrum falls below the detector threshold, and there are no discernible features to extract detector inefficiency corrections from.  Instead, three approaches have been taken to measure the relationship of the field effect in inefficiency corrected $^{83m}$Kr S1 data, as measured by S1(XYZ)/S1(Center), to the $^{83m}$Kr S1a/S1b ratio.  The first approach, in section \ref{section:S1relation}, converts the S2 field effect relationship to an S1 field effect relationship using the physics behind recombination.  In section \ref{MatthewsIdea} we use the expected light yield of the $^{83m}$Kr 31.2 keV decay as a function of electric field to measure detector inefficiency effects and separate them from the field effect we want to measure.  The final approach, in section \ref{section:S1relation2}, takes advantage of the fact that the energy spectrum of any event should remain insensitive to any recombination variation that arises from a non-uniform electric field.  In this method, we float the $^{83m}$Kr S1(XYZ)/S1(Center) to S1a/S1b relationship in a $\chi^2$ fit.  Within the fit we remove the field effect in both the S1 and S2 $^{83m}$Kr data (using the floated relationship for the S1 field effect), produce inefficiency-only corrections from the data, and then evaluate the corrected $^{83m}$Kr and CH$_3$T energy spectra.  The  S1(XYZ)/S1(Center) to S1a/S1b relationship which produces the minimum $\chi^2$ between the observed and expected energy spectra is chosen as the correct relationship.
+
+Because of the high light yield of electron recoil events in LXe at energies below 3 keV, there is no discernable peak in tritium S1 
+data that can be used to measure an S1 light collection efficiency function. 
+This prevents us from directly measuring the S1 field-smoothing function in the same manner as that of 
+the S2 as described above. 
+
+Instead, we employ a simultaneous fit to tritium and  $^{83m}$Kr data, demanding that the reconstructed energy of 
+dataset match the expected distribution and be independent of field. We
+
+
+Instead, three approaches have been taken to measure the relationship of the field effect in inefficiency corrected $^{83m}$Kr S1 data, as measured by S1(XYZ)/S1(Center), to the $^{83m}$Kr S1a/S1b ratio.  The first approach, in section \ref{section:S1relation}, converts the S2 field effect relationship to an S1 field effect relationship using the physics behind recombination.  In section \ref{MatthewsIdea} we use the expected light yield of the $^{83m}$Kr 31.2 keV decay as a function of electric field to measure detector inefficiency effects and separate them from the field effect we want to measure.  The final approach, in section \ref{section:S1relation2}, takes advantage of the fact that the energy spectrum of any event should remain insensitive to any recombination variation that arises from a non-uniform electric field.  In this method, we float the $^{83m}$Kr S1(XYZ)/S1(Center) to S1a/S1b relationship in a $\chi^2$ fit.  Within the fit we remove the field effect in both the S1 and S2 $^{83m}$Kr data (using the floated relationship for the S1 field effect), produce inefficiency-only corrections from the data, and then evaluate the corrected $^{83m}$Kr and CH$_3$T energy spectra.  The  S1(XYZ)/S1(Center) to S1a/S1b relationship which produces the minimum $\chi^2$ between the observed and expected energy spectra is chosen as the correct relationship.
 
 Once the field induced S2(XYZ)/S2(Center) to S1a/S1b relationship and the field induced S1(XYZ)/S1(Center) to S1a/S1b relationship have been determined they can be used in $^{83m}$Kr data sets from any time to remove the field effects in the $^{83m}$Kr data via mapping the S1a/S1b ratio.  Once the field effects are removed the residual S1 and S2 variation in the $^{83m}$Kr can be used to calculate pulse area corrections based on detector inefficiencies alone. The following sections detail each step of the process outlined above.
 
